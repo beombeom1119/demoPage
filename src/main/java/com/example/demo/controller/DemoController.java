@@ -10,9 +10,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class DemoController {
 
     @GetMapping("/demo2.3")
-    public String index()
+    public String demo2_3()
     {
         return "demo2.3";
+    }
+
+    @GetMapping("/")
+    public String index()
+    {
+        return "demo2.1";
     }
 
 //    @PostMapping("https://secureapi.test.eximbay.com/Gateway/DirectProcessor.krp")
