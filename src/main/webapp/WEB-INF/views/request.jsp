@@ -69,6 +69,7 @@
         System.out.println("[makeReqAllParam]return : "+reqParam.toString());
         return reqParam.toString();
     }
+
     //null 체크 함수
     public String checkNull(Object obj){
         if(obj == null) return "";
@@ -108,6 +109,7 @@
 <body leftmargin="0" topmargin="0" align="center" onload="javascript:document.regForm.submit();">
 <form name="regForm" method="post" action="<%=reqURL%>">
     <input type="hidden" name="fgkey" value="<%=fgkey%>" />	<!--필수 값-->
+<%--        <input type="hidden" name="fgkey" value="8362128AA26224EC9FB6208E8190D9674A14C95AAB3A1EDCCABEB9C18AB96C35" />	<!--필수 값-->--%>
     <%
         Enumeration param = request.getParameterNames();
         while(param.hasMoreElements()){

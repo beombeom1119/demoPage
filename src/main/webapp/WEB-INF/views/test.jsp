@@ -2,12 +2,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
 <%
-    //    String actionURL = "https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp";
-    String actionURL = " request";
+        String actionURL = "https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp";
+//    String actionURL = " request";
     int version = 230;
 //    String returnURl = "https://secureapi.test.eximbay.com/paytest/demo/returnurl.jsp";
     String returnURl = "https://www.eximbay.com/index.do";
-    String fgKey = "";
+    String fgKey = "8362128AA26224EC9FB6208E8190D9674A14C95AAB3A1EDCCABEB9C18AB96C35";
 //    String statusurl = "https://secureapi.test.eximbay.com/paytest/demo/statusurl.jsp";
     String statusurl = "https://secureapi.test.eximbay.com/paytest/demo/statusurl_delay.jsp";
 
@@ -73,7 +73,7 @@
 
 
         <label>fgkey :</label>
-        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="fgkey" value=<%=fgKey%>/>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="fgkey" value=<%=fgKey%> />
 
         <label>item_0_product :</label>
         <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_product" value="1"/>
