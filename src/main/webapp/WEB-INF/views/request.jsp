@@ -15,6 +15,7 @@
         }catch(Exception e){
             System.out.println("[encryptSHA256]Exception : " + e);
         }
+
         return "";
     }
     //16진수 변환 함수
@@ -74,9 +75,6 @@
         else return (String)obj;
     }
 %>
-
-
-
 <%
     request.setCharacterEncoding("utf-8");
 

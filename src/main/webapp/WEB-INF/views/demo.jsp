@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*"%>
+<%@ page import="java.util.*" %>
 <%
-//    String actionURL = "https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp";
+    //    String actionURL = "https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp";
     String actionURL = " request";
-    int version=230;
+    int version = 230;
     String returnURl = "https://secureapi.test.eximbay.com/paytest/demo/returnurl.jsp";
     String fgKey = "13328E3978B5A4DF926386980F11D04EC777432F5BBC822ACFFDD15EF94CDD88";
     String statusurl = "https://secureapi.test.eximbay.com/paytest/demo/statusurl.jsp";
@@ -12,7 +12,8 @@
 <html>
 <head>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;600&family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>Demo Page</title>
 </head>
@@ -20,71 +21,80 @@
 <h2>데모 페이지</h2>
 
 <div style="margin-left: 50px">
-<form action="<%=actionURL%>" method="post" style="white-space: nowrap">
-    <%--    <label>ver : </label>--%>
-    <input type="hidden" name="ver" value=<%=version%> /><br/>
+    <form action="<%=actionURL%>" method="post" >
+        <%--    <label>ver : </label>--%>
+        <input type="hidden" name="ver" value=<%=version%> /><br/>
 
-<div style="white-space:nowrap;">
-    <label> mid</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="mid" value="1849705C64" />
-</div>
+        <div style="white-space:nowrap;">
+            <label> mid</label>
+            <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="mid"
+                   value="1849705C64"/>
+        </div>
 
-    <label>ver :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="txntype" value="PAYMENT" />
+        <label>ver :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="txntype" value="PAYMENT"/>
 
-    <label>ref :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="ref" value="20220518150137" />
+        <label>ref :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="ref"
+               value="20220518150137"/>
 
-    <label>cur :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="cur" value="USD" />
+        <label>cur :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="cur" value="USD"/>
 
-    <label>amt :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="amt" value="1" />>
+        <label>amt :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="amt" value="1"/>
 
-    <label>shop :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="shop" value="Test SHOP" />
+        <label>shop :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="shop" value="Test SHOP"/>
 
-    <label>buyer :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="buyer" value="test sample" />
+        <label>buyer :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="buyer"
+               value="test sample"/>
 
-    <label>tel :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control"  type="text" name="tel" value="82020293029" />
+        <label>tel :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="tel" value="82020293029"/>
 
-    <label>email :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="email" value="Kobe@eximbay.com" />
+        <label>email :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="email"
+               value="Kobe@eximbay.com"/>
 
-    <label>lang :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="lang" value="EN" />
+        <label>lang :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="lang" value="EN"/>
 
-    <label>returnurl :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="returnurl" value=<%=returnURl%> />
+        <label>returnurl :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="returnurl"
+               value=<%=returnURl%>/>
 
-    <label>charset :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="charset" value="UTF-8" />
+        <label>charset :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="charset" value="UTF-8"/>
 
 
-    <label>fgkey :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="fgkey" value=<%=fgKey%> />
+        <label>fgkey :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="fgkey" value=<%=fgKey%>/>
 
-    <label>item_0_product :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_product" value="1" />
+        <label>item_0_product :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_product" value="1"/>
 
-    <label>item_0_quantity :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_quantity" value="1" />
+        <label>item_0_quantity :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_quantity"
+               value="1"/>
 
-    <label>item_0_link :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_link" value="https://www.eximbay.com/board-detail.do" />
+        <label>item_0_link :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_link"
+               value="https://www.eximbay.com/board-detail.do"/>
 
-    <label>displaytype :</label>   <!---Select 변경 필요--->
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="displaytype" value="P" />
+        <label>displaytype :</label>   <!---Select 변경 필요--->
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="displaytype" value="P"/>
 
-    <label>statusurl :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="statusurl" value=<%=statusurl%>>
+        <label>statusurl :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="statusurl"
+               value=<%=statusurl%>>
 
-    <label>item_0_unitPrice :</label>
-    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_unitPrice" value="1" />
-    <button type="submit" class="btn btn-primary">전송</button>
-</form>
+        <label>item_0_unitPrice :</label>
+        <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_unitPrice"
+               value="1"/>
+        <button type="submit" class="btn btn-primary">전송</button>
+    </form>
 </div>
 </body>
 </html>
