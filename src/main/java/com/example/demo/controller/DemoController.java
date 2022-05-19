@@ -32,19 +32,16 @@ public class DemoController {
 
     @GetMapping("/test")
     public String testForm() {
+        System.out.println("test");
         return "test";
     }
 
-    @PostMapping("https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp")
-    public void testFormPost(DemoVO demoVO)
-    {
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println(demoVO.toString());
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    }
-
-
-
+//    @PostMapping("https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp")
+//    public void testFormPost(@RequestBody DemoVO demoVO)
+//    {
+//        System.out.println(demoVO.toString());
+//
+// redirect를 이용해서 전달해보기.
 
 
     ///////////////////////////////////////////////// TEST ///////////////////////////////////////////////////////////////

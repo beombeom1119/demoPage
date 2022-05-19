@@ -96,6 +96,7 @@
         <label>item_0_unitPrice :</label>
         <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_unitPrice"
                value="1"/>
+
         <button type="submit" class="btn btn-primary">전송</button>
     </form>
 </div>
