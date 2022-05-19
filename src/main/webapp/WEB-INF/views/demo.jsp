@@ -20,68 +20,70 @@
 <h2>데모 페이지</h2>
 
 <div style="margin-left: 50px">
-<form action="<%=actionURL%>" method="post">
+<form action="<%=actionURL%>" method="post" style="white-space: nowrap">
     <%--    <label>ver : </label>--%>
     <input type="hidden" name="ver" value=<%=version%> /><br/>
 
+<div style="white-space:nowrap;">
     <label> mid</label>
-    <input style="width: 140px" class="form-control" type="text" name="mid" value="1849705C64" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="mid" value="1849705C64" />
+</div>
 
     <label>ver :</label>
-    <input style="width: 140px" class="form-control" type="text" name="txntype" value="PAYMENT" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="txntype" value="PAYMENT" />
 
     <label>ref :</label>
-    <input style="width: 140px" class="form-control" type="text" name="ref" value="20220518150137" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="ref" value="20220518150137" />
 
     <label>cur :</label>
-    <input style="width: 140px" class="form-control" type="text" name="cur" value="USD" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="cur" value="USD" />
 
     <label>amt :</label>
-    <input style="width: 140px" class="form-control" type="text" name="amt" value="1" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="amt" value="1" />>
 
     <label>shop :</label>
-    <input style="width: 140px" class="form-control" type="text" name="shop" value="Test SHOP" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="shop" value="Test SHOP" />
 
     <label>buyer :</label>
-    <input style="width: 140px" class="form-control" type="text" name="buyer" value="test sample" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="buyer" value="test sample" />
 
     <label>tel :</label>
-    <input style="width: 140px" class="form-control"  type="text" name="tel" value="82020293029" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control"  type="text" name="tel" value="82020293029" />
 
     <label>email :</label>
-    <input style="width: 140px" class="form-control" type="text" name="email" value="Kobe@eximbay.com" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="email" value="Kobe@eximbay.com" />
 
     <label>lang :</label>
-    <input style="width: 140px" class="form-control" type="text" name="lang" value="EN" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="lang" value="EN" />
 
     <label>returnurl :</label>
-    <input style="width: 140px" class="form-control" type="text" name="returnurl" value=<%=returnURl%> /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="returnurl" value=<%=returnURl%> />
 
     <label>charset :</label>
-    <input style="width: 140px" class="form-control" type="text" name="charset" value="UTF-8" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="charset" value="UTF-8" />
 
 
     <label>fgkey :</label>
-    <input style="width: 140px" class="form-control" type="text" name="fgkey" value=<%=fgKey%> /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="fgkey" value=<%=fgKey%> />
 
     <label>item_0_product :</label>
-    <input style="width: 140px" class="form-control" type="text" name="item_0_product" value="1" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_product" value="1" />
 
     <label>item_0_quantity :</label>
-    <input style="width: 140px" class="form-control" type="text" name="item_0_quantity" value="1" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_quantity" value="1" />
 
     <label>item_0_link :</label>
-    <input style="width: 140px" class="form-control" type="text" name="item_0_link" value="https://www.eximbay.com/board-detail.do" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_link" value="https://www.eximbay.com/board-detail.do" />
 
     <label>displaytype :</label>   <!---Select 변경 필요--->
-    <input style="width: 140px" class="form-control" type="text" name="displaytype" value="P" /><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="displaytype" value="P" />
 
     <label>statusurl :</label>
-    <input style="width: 140px" class="form-control" type="text" name="statusurl" value=<%=statusurl%>><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="statusurl" value=<%=statusurl%>>
 
     <label>item_0_unitPrice :</label>
-    <input style="width: 140px" class="form-control" type="text" name="item_0_unitPrice" value="1" /><br/>
-    <button type="submit" class="btn btn-primary">전송</button><br/>
+    <input style="width: 140px; font-size: 13px;" class="form-control" type="text" name="item_0_unitPrice" value="1" />
+    <button type="submit" class="btn btn-primary">전송</button>
 </form>
 </div>
 </body>

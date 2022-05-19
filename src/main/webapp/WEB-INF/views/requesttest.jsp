@@ -16,10 +16,9 @@
 <body style="">
 <h2>데모 페이지</h2>
 <form method="post" action="request.jsp">
+
     <%=ver%>
     <%=mid%>
-
-
 
 </form>
 </body>
