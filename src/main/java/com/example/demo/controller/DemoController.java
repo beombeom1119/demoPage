@@ -1,42 +1,46 @@
 package com.example.demo.controller;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.logging.Logger;
 
 @Controller
 public class DemoController {
 
-    @GetMapping("/demo2.3")
-    public String demo2_3()
+    @GetMapping("/demo")
+    public String demo()
     {
-        return "demo2.3";
+        return "demo";
     }
 
-    @GetMapping("/")
-    public String index()
+    @GetMapping("/demotest")
+    public String demoTest()
     {
-        return "demo2.1";
+        return "demotest";
     }
 
-//    @PostMapping("https://secureapi.test.eximbay.com/Gateway/DirectProcessor.krp")
-//    public void post(Model model , @RequestParam )
-//    {
-//
-//    }
-//
-    @PostMapping("")
-    public void post(@RequestParam Integer ver , @RequestParam String mid, @RequestParam String txntype)
+    @RequestMapping("/requesttest")
+    public String requesttest(@RequestParam("ver") String ver,@RequestParam("mid") String mid, Model model)
     {
-        ver = 230;
-        mid = "1849705C64";
-        txntype = "AUTHORIZE_PA";
+        model.addAttribute("ver",ver);
+        model.addAttribute("mid",mid);
+        System.out.println("ver -> "+ver);
+        System.out.println("mid -> "+mid);
+        return "requesttest";
     }
 
 
-
+    @GetMapping("/request")
+    public String request()
+    {
+        return "request";
+    }
 
 
 

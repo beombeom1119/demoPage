@@ -10,11 +10,8 @@
 </head>
 <body style="">
 <h2>데모 페이지</h2>
-<form action=<%=actionURL%> method="post" >
-    ver :  <input type="text" name="ver" value="230" /><br/>
-    mid :  <input type="text" name="mid" value="1849705C64" /><br/>
-    txntype : <input type="text" name="txntype" value="AUTHORIZE_PA" /><br/>
-    <button type="submit">전송</button>
+<form method="post" action="request.jsp">
+asdsa
 </form>
 </body>
 </html>
