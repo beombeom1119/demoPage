@@ -5,6 +5,7 @@ import com.example.demo.VO.DemoVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class DemoController {
@@ -32,16 +33,29 @@ public class DemoController {
 
     @GetMapping("/test")
     public String testForm() {
-        System.out.println("test");
+        System.out.println("test 페이지를 불러왔습니다.");
         return "test";
     }
 
-//    @PostMapping("https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp")
-//    public void testFormPost(@RequestBody DemoVO demoVO)
-//    {
-//        System.out.println(demoVO.toString());
-//
-// redirect를 이용해서 전달해보기.
+    @PostMapping("/redirect")
+    public String testFormPost(DemoVO demoVO, RedirectAttributes redirectAttributes) throws Exception{
+        System.out.println("!!!!!!!!!!!!!~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!");
+        redirectAttributes.addFlashAttribute("demoVO",demoVO);
+        System.out.println(demoVO);
+        System.out.println("!!!!!!!!!!!!!~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!");
+        String redirectUrl = "https://secureapi.test.eximbay.com/Gateway/BasicProcessor.krp";
+        return "redirect:" + redirectUrl;
+
+
+
+    }
+
+    @PostMapping("/redirect1")
+    public void testFormPost() {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    }
+
 
 
     ///////////////////////////////////////////////// TEST ///////////////////////////////////////////////////////////////
